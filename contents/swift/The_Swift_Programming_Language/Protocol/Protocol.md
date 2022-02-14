@@ -156,3 +156,29 @@ class SubClass: SuperClass, Writeable, ReadSpeakable {
 ****프로토콜 준수 확인****
 
 is, as 연산자를 사용해서 인스턴스가 특정 프로토콜을 준수하는지 확인할 수 있습니다.
+let sup: SuperClass = SuperClass()
+let sub: SubClass = SubClass()
+
+var someAny: Any = sup
+someAny is Readable // true
+someAny is ReadSpeakable // false
+
+someAny = sub
+someAny is Readable // true
+someAny is ReadSpeakable // true
+
+someAny = sup
+
+if let someReadable: Readable = someAny as? Readable {
+    someReadable.read()
+} // read
+
+if let someReadSpeakable: ReadSpeakable = someAny as? ReadSpeakable {
+    someReadSpeakable.speak()
+} // 동작하지 않음
+
+someAny = sub
+
+if let someReadable: Readable = someAny as? Readable {
+    someReadable.read()
+} // read
