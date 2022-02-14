@@ -61,7 +61,7 @@ Enum
 예) 요일, 상태값, 월(Month) 등
 • 열거형 자체가 하나의 데이터 타입
 열거형의 case 하나하나 전부 하나의 유의미한 값으로 취급
-• 선언 키워드 - enum
+• 선언 키워드 - enum 
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cf31ea90-4f0e-43ba-bf63-4da7e3ab0768/Untitled.png)
 
