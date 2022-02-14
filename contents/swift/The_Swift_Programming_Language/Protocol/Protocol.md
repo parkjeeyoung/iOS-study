@@ -1,5 +1,3 @@
-# 프로토콜 (Protocols)
-
 # **프로토콜**
 
 *프로토콜(Protocol)* 은 특정 역할을 수행하기 위한 메서드, 프로퍼티, 기타 요구사항 등의 청사진을 정의합니다. 구조체, 클래스, 열거형은 프로토콜을 **채택(Adopted)** 해서 특정 기능을 수행하기 위한 프로토콜의 요구사항을 실제로 구현할 수 있습니다. 어떤 프로토콜의 요구사항을 모두 따르는 타입은 그 **프로토콜을 준수한다(Conform)** 고 표현합니다. 타입에서 프로토콜의 요구사항을 충족시키려면 프로토콜이 제시하는 청사진의 기능을 모두 구현해야 합니다. 즉, 프로토콜은 기능을 정의하고 제시 할 뿐이지 스스로 기능을 구현하지는 않습니다.
@@ -58,7 +56,7 @@ struct Person: Talkable {
 //        }
 //    }
     
-    // 메서드 요구 준수     
+    // 메서드 요구 준수    
     func talk() {
         print("\(topic)에 대해 \(language)로 말합니다")
     }
@@ -156,6 +154,8 @@ class SubClass: SuperClass, Writeable, ReadSpeakable {
 ****프로토콜 준수 확인****
 
 is, as 연산자를 사용해서 인스턴스가 특정 프로토콜을 준수하는지 확인할 수 있습니다.
+
+```swift
 let sup: SuperClass = SuperClass()
 let sub: SubClass = SubClass()
 
@@ -182,3 +182,4 @@ someAny = sub
 if let someReadable: Readable = someAny as? Readable {
     someReadable.read()
 } // read
+```
