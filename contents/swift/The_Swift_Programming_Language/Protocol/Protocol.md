@@ -58,7 +58,7 @@ struct Person: Talkable {
 //        }
 //    }
     
-    // 메서드 요구 준수    
+    // 메서드 요구 준수     
     func talk() {
         print("\(topic)에 대해 \(language)로 말합니다")
     }
