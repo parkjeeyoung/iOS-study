@@ -63,7 +63,7 @@ Enum
 열거형의 case 하나하나 전부 하나의 유의미한 값으로 취급
 • 선언 키워드 - enum 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cf31ea90-4f0e-43ba-bf63-4da7e3ab0768/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/98685312/153835620-33eb6a8d-ccda-4534-94fd-88532413dd71.png)
 
 구조체는 언제 사용하나?
 • 연관된 몇몇의 값들을 모아서
