@@ -155,7 +155,20 @@ class SubClass: SuperClass, Writeable, ReadSpeakable {
 
 is, as 연산자를 사용해서 인스턴스가 특정 프로토콜을 준수하는지 확인할 수 있습니다.
 
+- **is :** 앞에있는 타입이 뒤에있는 프로토콜을 채택하고 있는지 확인 (반환타입 Bool)
+- **as? :** 앞에있는 타입이 뒤에있는 프로토콜을 채택하고 있는 경우 해당 타입을 프로토콜 타입으로 다운케스트, 그렇지 않은 경우는 nil 반환
+- **as! :** 앞에있는 타입을 뒤에있는 프로토콜 타입으로 다운캐스트 실패시 런타임 에러 발생
+
 ```swift
+class SuperClass: Readable {
+    func read() { }
+}
+
+class SubClass: SuperClass, Writeable, ReadSpeakable {
+    func write() { }
+    func speak() { }
+}
+
 let sup: SuperClass = SuperClass()
 let sub: SubClass = SubClass()
 
